@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pretest": "rimraf -r ./cypress/report/*.json",
+    "test": "echo I am inside Test...",
+    "posttest": "echo I am inside Posttest",
+    "sayhello": "echo zdarowa clown",
+    "merge-reports": "mochawesome-merge ./cypress/report/*.json > ./report1.json",
+    "generate-htmlreport": "marge ./report1.json --reportDir ./cypress/report"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +19,7 @@
     "mochawesome": "^7.1.3",
     "mochawesome-merge": "^4.3.0",
     "mochawesome-report-generator": "^6.2.0",
+    "rimraf": "^5.0.1",
     "typescript": "^5.1.6"
   }
 }

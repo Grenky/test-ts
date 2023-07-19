@@ -30,5 +30,5 @@ it('learning assertins', function() {
 
     assert.equal(4, 4, 'Not equal')
     assert.strictEqual(4, 4, 'Not strictly equal')
-    
+ 
 })
