@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "pretest": "rimraf -r ./cypress/report/*.json",
+    "pretest": "rimraf --glob ./cypress/report/*.json",
     "test": "echo I am inside Test...",
     "posttest": "echo I am inside Posttest",
     "sayhello": "echo zdarowa clown",
